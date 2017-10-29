@@ -52,12 +52,9 @@ class QuotesDisplay extends React.Component {
   // this.fetchQuote(this.quoteId)
 
   componentWillReceiveProps(nextProps) {
-    this.qsParams = queryString.parse(nextProps.location.search)
-    this.quoteId = Number(this.qsParams.quote)
-    this.setState({
-      quote: {id: 17, text: "another quote", author: "jhkjhkj", next_id: 18, previous_id: 16}
-    })
-  }
+     this.setQuoteIdFromQueryString(nextProps.location.search)
+     this.fetchQuote(this.quoteId)
+   }
 
 
   render() {

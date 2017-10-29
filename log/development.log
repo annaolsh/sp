@@ -8780,3 +8780,43 @@ Processing by Api::QuotesController#show as JSON
 Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/?quote=17" for ::1 at 2017-10-29 12:01:28 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"quote"=>"17"}
+  [1m[36mQuote Load (1.3ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 61ms (Views: 51.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/quotes/16" for ::1 at 2017-10-29 12:01:29 -0400
+Processing by Api::QuotesController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering api/quotes/show.json.jbuilder
+  [1m[36mQuote Load (1.0ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  [1m[36mCACHE Quote Load (0.0ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  Rendered api/quotes/show.json.jbuilder (3.4ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?quote=17" for ::1 at 2017-10-29 12:01:44 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"quote"=>"17"}
+  [1m[36mQuote Load (1.0ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" ORDER BY "quotes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/quotes/16" for ::1 at 2017-10-29 12:01:45 -0400
+Processing by Api::QuotesController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT  "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering api/quotes/show.json.jbuilder
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  [1m[36mCACHE Quote Load (0.0ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  Rendered api/quotes/show.json.jbuilder (3.3ms)
+Completed 200 OK in 23ms (Views: 9.3ms | ActiveRecord: 1.8ms)
+
+
